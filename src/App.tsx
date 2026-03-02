@@ -3,7 +3,9 @@ import { Hero } from './components/Hero';
 import { Problems } from './components/Problems';
 import { Methodology } from './components/Methodology';
 import { Testimonials } from './components/Testimonials';
+import { SocialProof } from './components/SocialProof';
 import { Bonus } from './components/Bonus';
+import { MembersArea } from './components/MembersArea';
 import { Pricing } from './components/Pricing';
 import { Faq } from './components/Faq';
 import { Footer } from './components/Footer';
@@ -15,7 +17,9 @@ function App() {
       <Problems />
       <Methodology />
       <Testimonials />
+      <SocialProof />
       <Bonus />
+      <MembersArea />
       <Pricing />
       <Faq />
       <Footer />

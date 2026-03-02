@@ -35,10 +35,11 @@ export function Hero() {
                 </div>
 
                 {/* Wistia Video */}
-                <div className="w-full max-w-3xl mb-8 rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(240,91,125,0.15)] bg-black/50 aspect-video relative">
+                {/* Wistia Video */}
+                <div className="w-full max-w-4xl mb-8 relative">
                     <div className="wistia_responsive_padding" style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
                         <div className="wistia_responsive_wrapper" style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}>
-                            <div className="wistia_embed wistia_async_pgqg5ez6vi seo=false videoFoam=true" style={{ height: '100%', position: 'relative', width: '100%' }}>
+                            <div className="wistia_embed wistia_async_pgqg5ez6vi seo=false videoFoam=true" style={{ height: '100%', position: 'relative', width: '100%', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5)' }}>
                                 <div className="wistia_swatch" style={{ height: '100%', left: 0, opacity: 0, overflow: 'hidden', position: 'absolute', top: 0, transition: 'opacity 200ms', width: '100%' }}>
                                     <img src="https://fast.wistia.com/embed/medias/pgqg5ez6vi/swatch" style={{ filter: 'blur(5px)', height: '100%', objectFit: 'contain', width: '100%' }} alt="" aria-hidden="true" />
                                 </div>
