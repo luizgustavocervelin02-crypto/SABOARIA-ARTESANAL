@@ -3,7 +3,7 @@ import { Check } from 'lucide-react';
 
 export function Pricing() {
     return (
-        <section className="bg-white py-16 md:py-24 px-4 text-brand-dark">
+        <section id="pricing" className="bg-white py-16 md:py-24 px-4 text-brand-dark">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase leading-tight">
