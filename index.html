@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saboaria Artesanal - Fábrica Caseira de Sabonetes</title>
+    
+    <!-- Google Fonts - Poppins & Dancing Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Preconnect to Wistia -->
+    <link rel="preconnect" href="https://fast.wistia.com">
+    <link rel="preconnect" href="https://embed-ssl.wistia.com">
+    <link rel="preconnect" href="https://embed-cloudfront.wistia.com">
+    <link rel="dns-prefetch" href="https://embed-cloudfront.wistia.com">
+    
+    <script src="https://fast.wistia.com/embed/medias/pgqg5ez6vi.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/notiflix@2.6.0/dist/notiflix-aio-2.6.0.min.js" async defer></script>
+
+    <!-- UTMify Pixel -->
+    <script>
+      window.pixelId = "694052d5f32c8ee38a001942";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Purchase Notification Script -->
+    <script>
+      var position = "left-bottom";
+      var color = "verde";
+      var animation = "from-left";
+      var product_name = "<strong>Fábrica Caseira de Sabonetes</strong>";
+      var phrase = "<strong>adquiriu as</strong>";
+      var timeout = 4000;
+      var type_name = "fem";
+      var msg_final = "";
+      var min_time = 4;
+      var max_time = 20;
+
+      var names_masc = ["João", "Pedro", "Carlos", "Lucas", "Mateus", "Rafael", "Bruno", "André", "Fernando", "Ricardo", "Marcos", "Paulo", "Gustavo", "Henrique", "Felipe", "Diego", "Thiago", "Leonardo", "Rodrigo", "Eduardo"];
+      var names_fem = ["Maria", "Ana", "Juliana", "Fernanda", "Camila", "Patrícia", "Luciana", "Aline", "Carla", "Beatriz", "Larissa", "Gabriela", "Amanda", "Jéssica", "Vanessa", "Renata", "Priscila", "Tatiane", "Cláudia", "Roberta", "Sandra", "Mariana", "Letícia", "Bruna", "Carolina", "Daniela", "Natália", "Cristiane", "Adriana", "Simone", "Andréia", "Fabiana", "Mônica", "Débora", "Elaine", "Rosana", "Silvia", "Alessandra", "Raquel", "Flávia"];
+
+      var option = {
+        position: position,
+        cssAnimationStyle: animation,
+        plainText: false,
+        timeout: timeout
+      };
+
+      function show_notification() {
+        var list = type_name === "masc" ? names_masc : names_fem;
+        msg_final = `<strong>${list[Math.floor(Math.random() * list.length)]}</strong> ${phrase} ${product_name}`;
+
+        if (window.Notiflix && window.Notiflix.Notify) {
+          window.Notiflix.Notify.Success(msg_final, option);
+        }
+
+        var rand = Math.floor(Math.random() * (max_time - min_time + 1) + min_time);
+        setTimeout(show_notification, rand * 1000);
+      }
+
+      setTimeout(show_notification, 4000);
+    </script>
+  </body>
+</html>

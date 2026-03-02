@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-whatsapp: #22c55e;
+  --color-brand-green: #10B981;
+  --color-brand-green-hover: #059669;
+  --color-brand-dark: #121212;
+  --color-brand-gray: #2F2F2F;
+  --color-brand-light: #F5F1EE;
+  
+  --font-poppins: "Poppins", sans-serif;
+  --font-dancing: "Dancing Script", cursive;
+}
+
+body {
+  @apply font-poppins text-white bg-brand-dark antialiased m-0 min-h-screen relative font-light;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.8);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.8s ease-out forwards;
+}
+.animate-pulseGlow {
+  animation: pulseGlow 2s infinite;
+}
